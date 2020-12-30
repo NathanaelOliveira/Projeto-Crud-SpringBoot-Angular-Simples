@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Atualizar Curso</h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Descrição </label>   
+             <input type= "text" class = "form-control" id = "descricao"
+                [(ngModel)] = "curso.descricao" name = "descricao">
+        </div>
+        <div class="form-group">
+            <label> Data de Início </label>   
+             <input type= "date" class = "form-control" id = "data_inicio"
+                [(ngModel)] = "curso.data_inicio" name = "data_inicio">
+        </div>
+        <div class="form-group">
+            <label> Data de Término </label>   
+             <input type= "date" class = "form-control" id = "data_termino"
+                [(ngModel)] = "curso.data_termino" name = "data_termino">
+        </div>
+    
+        <div class="form-group">
+            <label> Quantidade de Pessoas </label>   
+             <input type= "number" class = "form-control" id = "quantidade_pessoas"
+                [(ngModel)] = "curso.quantidade_pessoas" name = "quantidade_pessoas">
+        </div>
+    
+        <div class="form-group">
+            <label> Categoria </label>   
+             <input type= "number" class = "form-control" id = "categoria"
+                [(ngModel)] = "curso.categoria" name = "categoria">
+        </div>
+    
+        <button class="btn btn-success" type ="submit">Salvar</button>
+    
+    
+    </form>
+    </div>

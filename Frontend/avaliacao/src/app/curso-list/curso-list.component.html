@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class = "thead-dark">
+            <tr >
+                <th>Código do Curso</th>
+                <th>Descrição</th>
+                <th>Data de Início</th>
+                <th>Data de Término </th>
+                <th>Quantidade de Pessoas</th>
+                <th>Categoria</th>
+                
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let curso of cursos" >
+                <td>{{curso.cod_curso}}</td>
+                <td>{{curso.descricao}}</td>
+                <td>{{curso.data_inicio}}</td>
+                <td>{{curso.data_termino}}</td>
+                <td>{{curso.quantidade_pessoas}}</td>
+                <td>{{curso.categoria}}</td>
+                <td>
+                    <button (click) = "updateCurso(curso.cod_curso)" class="btn btn-info"> Atualizar </button>
+                    <button (click) = "deleteCurso(curso.cod_curso)" class="btn btn-danger" style="margin-left: 5px;"> Excluir </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
